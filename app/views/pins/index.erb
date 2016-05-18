@@ -11,9 +11,9 @@
           <div class="pin">
             <div class="pin-header row">
                 <div class="logo-thumbnail" >
-                  <% if "#{pin.resource_type}" == "rails" %>
+                  <% if "#{pin.category_id}" == "rails" %>
                     <%= image_tag('rails-logo-thumbnail.png') %>
-                  <% elsif "#{pin.resource_type}" == "ruby" %>
+                  <% elsif "#{pin.category_id}" == "ruby" %>
                     <%= image_tag('ruby-logo-thumbnail.png') %>
                   <% end %>
                 </div>
@@ -22,7 +22,7 @@
                   <%= link_to "#{pin.title}", "/pins/name-#{pin.slug}" %>
                 </h4>
                   <a class="url" href="<%= "#{pin.url}" %>" target="_blank">
-                  <%= "#{pin.url.truncate(30)}" %>
+                    <%= "#{pin.url}" %>
                 </a>
               </div>
             </div>
