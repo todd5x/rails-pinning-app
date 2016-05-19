@@ -47,3 +47,5 @@ end
 gem 'rspec'
 gem 'rspec-rails'
 gem 'rails_12factor'
+gem 'paperclip'
+gem 'aws-sdk', '< 1.6'
