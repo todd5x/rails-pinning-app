@@ -1,0 +1,6 @@
+REMOVED FROM INDEX.ERB
+                  <% if "#{pin.category_id}" == "rails" %>
+                    <%= image_tag('rails-logo-thumbnail.png') %>
+                  <% elsif "#{pin.category_id}" == "ruby" %>
+                    <%= image_tag('ruby-logo-thumbnail.png') %>
+                  <% end %>
