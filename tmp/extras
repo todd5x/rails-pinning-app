@@ -4,3 +4,10 @@ REMOVED FROM INDEX.ERB
                   <% elsif "#{pin.category_id}" == "ruby" %>
                     <%= image_tag('ruby-logo-thumbnail.png') %>
                   <% end %>
+                  
+                  
+REMOVED FROM _FORM.ERB
+<div class="form-group">
+<label for="pin_category_id">Category</label>
+<%= f.collection_select(:category_id, Category.all, :id, :name, {prompt: "Select a category"}, {class: "form-control"}) %>
+</div>
