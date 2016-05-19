@@ -85,7 +85,5 @@ Rails.application.configure do
 		:secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
 	}
   }
-  
-  Paperclip.options[:content_type_mappings] = {png: "image/png"}
-  
+   
 end
