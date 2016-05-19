@@ -21,26 +21,30 @@
         <%= f.url_field :url, class: "form-control", placeholder: "http://www.someexample.com" %>
     </div>
 
-     <div class="form-group">
-<label for="pin_text">Description</label>
+    <div class="form-group">
+    <label for="pin_text">Description</label>
          <%= f.text_area :text, class: "form-control", placeholder: "Description" %>
     </div>
 
-     <div class="form-group">
-<label for="pin_slug">Slug</label>
+    <div class="form-group">
+    <label for="pin_slug">Slug</label>
          <%= f.text_field :slug, class: "form-control", placeholder: "Pretty URL" %>
     </div>
 
+      <div class="form-group">
+      <label for="pin_image_file_name">Image Name</label>
+          <%= f.text_field :image_file_name, class: "form-control", placeholder: "File Name" %>
+      </div>
 
+      <div class="form-group">
+      <label for="pin_image">Image</label>
+          <%= f.file_field :image, class: "form-control" %>
+      </div>
 
-<div class="form-group">
-<label for="pin_image">Image</label>
-    <%= f.file_field :image, class: "form-control" %></div>
     <div class="control-group">
-
-    <div class="controls">
+      <div class="controls">
         <%= f.button :Submit, class: "btn btn-default" %>
-        </div>
+      </div>
     </div>
 
 <% end %>
