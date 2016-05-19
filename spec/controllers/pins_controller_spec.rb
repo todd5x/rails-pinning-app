@@ -1,19 +1,19 @@
 require 'spec_helper'
 
 RSpec.describe PinsController do
- 
+
   describe "GET index" do
       it 'renders the index template' do
         get :index
         expect(response).to render_template("index")
       end
-    
+
       it 'populates @pins with all pins' do
         get :index
         expect(assigns[:pins]).to eq(Pin.all)
       end
   end
-  
+
   describe "GET new" do
       it 'responds with successfully' do
         get :new
@@ -21,7 +21,7 @@ RSpec.describe PinsController do
       end
 
       it 'renders the new view' do
-        get :new      
+        get :new
         expect(response).to render_template(:new)
       end
 
@@ -33,12 +33,12 @@ RSpec.describe PinsController do
 
     describe "POST create" do
       before(:each) do
-        @pin_hash = { 
-          title: "Rails Wizard", 
-          url: "http://railswizard.org", 
-          slug: "rails-wizard", 
+        @pin_hash = {
+          title: "Rails Wizard",
+          url: "http://railswizard.org",
+          slug: "rails-wizard",
           text: "A fun and helpful Rails Resource",
-          resource_type: "rails"}    
+          resource_type: "rails"}
       end
 
       after(:each) do
@@ -54,7 +54,7 @@ RSpec.describe PinsController do
       end
 
       it 'creates a pin' do
-        post :create, pin: @pin_hash  
+        post :create, pin: @pin_hash
         expect(Pin.find_by_slug("rails-wizard").present?).to be(true)
       end
 
@@ -79,6 +79,6 @@ RSpec.describe PinsController do
         @pin_hash.delete(:title)
         post :create, pin: @pin_hash
         expect(assigns[:errors].present?).to be(true)
-      end    
+      end
     end
 end
