@@ -1,7 +1,20 @@
-<hr>
-<h1>Edit a Pin</h1>
-<%= render 'form' %>
-<br>
-<%= link_to 'Show', @pin %> |
-<%= link_to 'Cancel', root_path %>
-<hr>
+<div class="header">
+  <h1>Learning to Code</h1>
+  <h3>A Collection of Ruby on Rails Resources for Beginners</h3>
+</div>
+<hr/>
+<div class="panel panel-default">
+  <div class="panel-heading">Edit Pin</div>
+  <div class="panel-body">
+	<% if !@errors.nil? %>
+		<div class="alert alert-danger" role="alert"><p><b><%= pluralize(@errors.count, "error") %> prohibited this pin from being saved:</b></p>
+			<ul>
+				<% @errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+	<%= render "form" %>
+  </div>
+ </div>

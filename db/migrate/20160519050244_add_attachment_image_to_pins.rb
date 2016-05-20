@@ -1,7 +1,7 @@
 class AddAttachmentImageToPins < ActiveRecord::Migration
   def self.up
     change_table :pins do |t|
-      t.attachment :image, :image_file_name
+      t.attachment :image
     end
   end
 
