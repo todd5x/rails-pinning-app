@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :users
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -7,8 +9,17 @@ Rails.application.routes.draw do
 
   get 'pins/name-:slug' => 'pins#show_by_name', as: 'pin_by_name'
 
+  get '/signup' => "users#new", as: :signup
+
+  get '/login' => "users#login"
+
   get '/library' => 'pins#index'
-  
+
+  #route that maps a post to /login to “users#authenticate”
+  post '/login' => "users#authenticate"
+
+  resources :users, except: [:index]
+
   resources :pins
 
   # Example of regular route:
