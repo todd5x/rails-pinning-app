@@ -51,3 +51,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 gem 'rails_12factor'
 gem 'paperclip'
 gem 'aws-sdk', '~> 1.6'
+
+group :development, :test do
+  gem 'shoulda-matchers', '~> 3.1', '>= 3.1.1'
+end
+
+gem 'bcrypt', '~> 3.1.7'

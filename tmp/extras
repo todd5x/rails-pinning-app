@@ -19,3 +19,14 @@ rails_category = Category.where(name: "rails")
 
 SPECULATION:
 Category and category_id are not set correctly 
+
+USER AUTHENTICATION:
+  def has_password?(password)
+    password = User.find_by_password(password)
+  end
+
+	def self.authenticate(email, password)
+		user = find_by_email(email)
+    return nil if user.nil?
+    return user if user.has_password?(password)
+  end

@@ -42,6 +42,7 @@ GEM
     aws-sdk-v1 (1.66.0)
       json (~> 1.4)
       nokogiri (>= 1.4.4)
+    bcrypt (3.1.11)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
@@ -164,6 +165,8 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    shoulda-matchers (3.1.1)
+      activesupport (>= 4.0.0)
     spring (1.7.1)
     sprockets (2.12.3)
       hike (~> 1.2)
@@ -195,6 +198,7 @@ PLATFORMS
 
 DEPENDENCIES
   aws-sdk (~> 1.6)
+  bcrypt (~> 3.1.7)
   byebug
   coffee-rails (~> 4.1.0)
   database_cleaner
@@ -210,6 +214,7 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
+  shoulda-matchers (~> 3.1, >= 3.1.1)
   spring
   turbolinks
   tzinfo-data

@@ -15,6 +15,8 @@ Rails.application.routes.draw do
 
   get '/library' => 'pins#index'
 
+  delete 'logout/:id' => "users#logout", as: :logout
+
   #route that maps a post to /login to “users#authenticate”
   post '/login' => "users#authenticate"
 
